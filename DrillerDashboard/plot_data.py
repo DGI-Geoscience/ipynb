@@ -20,7 +20,7 @@ def plot_data(data_frame, from_time, to_time):
     color_idx = np.linspace(0, 1, len(params))
     axis_array[0].set_title(from_time + " to " + to_time)
     for c, name, axis in zip(color_idx, params, axis_array):
-        axis.plot(data_frame2["time"], data_frame2[name], color=plt.cm.Dark2(c), linestyle="None", marker=".")
+        axis.plot_date(data_frame2["time"], data_frame2[name], color=plt.cm.Dark2(c), linestyle="None", marker=".")
         axis.set_ylabel(name)
 
     return data_frame
